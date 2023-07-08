@@ -5,16 +5,25 @@ def listen():
 
     with sr.Microphone() as source:
 
-        audio = r.listen(source=source)
+        print('Listening...')
+
+        # Recognition using SPHINX
 
         try:
-            query = r.recognize_google(audio, language="en-in")
-            print(f"User said: {query}")
-            return query
+            
+
+        # Google Recognition
+        # try:
+        #     print('Listening ...')
+
+        #     audio = r.listen(source, 10, 3)
+        #     query = r.recognize_google(audio, language="en-in")
+        #     print(f"User said: {query}")
+        #     return query
         
-        except Exception as e:
-            print('Exception found E : ', e)
-            return e
+        # except Exception as e:
+        #     print('Exception found E : ', e)
+        #     return e
         
 
 if __name__ == '__main__':
